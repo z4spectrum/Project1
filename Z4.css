@@ -3,12 +3,12 @@
     padding: 0;
 }
 body{
-    background-color: rgb(213, 213, 183);
+    background-color: rgb(235, 235, 209);
 }
 nav{
     
     background-color:rgb(38, 57, 71) ;
-    height: 80px;
+    height: 90px;
     display: flex;
    white-space: nowrap;
    align-items: center;
@@ -38,4 +38,41 @@ h1{
     margin-left: 20px;
     display: inline;
    
+}
+.hero h1{
+    color:rgb(38, 57, 71) ;
+    margin-top: 120px;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+}
+.hero2{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color:rgb(38, 57, 71) ;
+}
+.box{
+    width:300px ;
+    height:150px ;
+    background-color: white;
+    margin-left: 150px;
+    margin-top: 100px;
+    display: inline-block;
+    border-radius: 10px;
+  
+}
+.box h2{
+    margin-top: 20px;
+    margin-left: 70px;
+    
+}
+#high{
+    margin-left: 40px;
+  
+}
+.footer{
+    margin-top: 90px;
+    height: 70px;
 }
