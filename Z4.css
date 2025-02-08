@@ -15,6 +15,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 nav {
     background-color: rgb(38, 57, 71);
@@ -81,13 +84,14 @@ nav a {
     line-height: 1.5;
 }
 
-.box-container {
+#box-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
     margin: 50px 20px;
     flex: 1;
+  
 }
 
 .box {
