@@ -92,6 +92,10 @@ nav a {
     margin: 50px 20px;
     flex: 1;
 }
+#box-container a{
+    text-decoration: none;
+
+}
 
 .box {
     width: 300px;
