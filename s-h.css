@@ -26,3 +26,14 @@ input, button, textarea {
 button {
     margin-right: 10px; 
 }
+@media screen and (max-width:650px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        flex-direction: column;
+        width: 200px;
+    }
+    
+}
