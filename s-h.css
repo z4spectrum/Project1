@@ -26,7 +26,7 @@ input, button, textarea {
 button {
     margin-right: 10px; 
 }
-@media screen and (max-width:650px) {
+@media screen and (max-width:850px) {
     .container{
         display: flex;
         justify-content: center;
