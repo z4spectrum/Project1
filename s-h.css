@@ -10,4 +10,19 @@ body{
     display: flex;
     justify-content: center;
     color: beige;
+    margin-bottom: 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+}
+input, button, textarea {
+    margin-bottom: 10px; 
+}
+button {
+    margin-right: 10px; 
 }
