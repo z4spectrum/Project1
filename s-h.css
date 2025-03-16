@@ -219,6 +219,7 @@ footer {
     .box {
         width: 100%;
         padding: 15px;
+        margin: 0 auto; /* Center the box */
     }
 
     textarea {
@@ -232,72 +233,12 @@ footer {
 
     .search-container input,
     .search-container button {
-        width: 100%;
+        width: 90%; /* Reduced width for search elements */
+        margin: 0 auto; /* Center the search elements */
     }
 
     footer {
         font-size: 12px;
         padding: 10px;
-    }
-}
-
-/* ------------------------------ */
-/* UPDATED OVERRIDING MEDIA QUERIES for Correct Alignment */
-/* ------------------------------ */
-
-/* For screens up to 1024px (tablets and smaller laptops) */
-@media (max-width: 1024px) {
-    /* Center header content */
-    header {
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding: 10px !important;
-    }
-    /* Center navigation items and allow wrapping */
-    nav {
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: wrap !important;
-    }
-    nav a {
-        white-space: normal !important;
-        margin: 5px !important;
-        font-size: 14px !important;
-    }
-    /* Center the search container and expand input/button widths */
-    .search-container {
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-    }
-    .search-container input,
-    .search-container button {
-        width: 100% !important;
-        max-width: none !important;
-    }
-    /* Center the box container */
-    .box {
-        width: 95% !important;
-        margin: auto !important;
-    }
-    /* Adjust main padding for balance */
-    main {
-        padding: 40px 20px !important;
-        text-align: center !important;
-    }
-}
-
-/* For larger screens (1025px and up), ensure central alignment */
-@media (min-width: 1025px) {
-    header,
-    nav,
-    main,
-    .box {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
     }
 }
