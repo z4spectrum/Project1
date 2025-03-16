@@ -12,3 +12,7 @@ speakBtn.addEventListener('click', () => {
     speechSynthesis.speak(utterance);
   }
 });
+function cleartxt(){
+  textInput.value="";
+
+}
