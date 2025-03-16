@@ -159,6 +159,7 @@ footer {
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
     }
 
     nav a {
@@ -201,6 +202,7 @@ footer {
     nav {
         flex-direction: column;
         gap: 5px;
+        width: 100%;
     }
 
     nav a {
