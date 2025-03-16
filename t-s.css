@@ -33,7 +33,7 @@ nav {
 
 nav .logo {
   display: flex;
-  color: #fff;
+  color: beige;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -45,7 +45,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: beige;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -124,7 +124,7 @@ main {
 footer {
   text-align: center;
   background-color: #2f3e46;
-  color: #fff;
+  color: beige;
   padding: 1rem 0;
   margin-top: 2rem; /* You can remove this if you don't want extra spacing above the footer */
 }
