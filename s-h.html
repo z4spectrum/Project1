@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="LogoCircle.png" type="img/png">
     <title>Search And Highlight</title>
     <link rel="stylesheet" href="s-h.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .highlight {
+            background-color: yellow; /* Highlight color */
+            font-weight: bold;
+        }
+        #result {
+            width: 100%;
+            min-height: 150px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #fff;
+        }
+    </style>
 </head>
 
 <body>
     <div class="top">
         <h1>Search and Highlight</h1>
     </div>
+
     <div class="container">
-        <div >
-            <input type="text" placeholder="Type here">
-            <button>Search</button>
-            <button>Clear</button>
-        </div>
-        <div>
-            <textarea name="para" id="area" rows="10" placeholder="Enter Your para here..."></textarea>
-            <button>Clear</button>
-        </div>
+        <input type="text" id="searchBox" placeholder="Type here">
+        <button id="searchBtn">Search</button>
+        <button id="clearBtn">Clear</button>
+
+        <div id="result" contenteditable="true" placeholder="Enter Your para here..."></div>
     </div>
+
+    <script src="s-h.js"></script>
 </body>
 </html>

@@ -1,44 +1,31 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchBox");
+    const searchButton = document.getElementById("searchBtn");
+    const clearButton = document.getElementById("clearBtn");
+    const resultDiv = document.getElementById("result");
 
-const searchButton = document.querySelector('.intcontanier button');
-const clearButton = document.querySelector('.passcontainer button');
-const searchInput = document.querySelector('.intbox');
-const paragraphArea = document.getElementById('passid');
+    searchButton.addEventListener("click", function () {
+        let searchText = searchInput.value.trim();
+        let content = resultDiv.innerHTML;
 
-// Function to highlight text
-function highlightText() {
-    const searchTerm = searchInput.value.trim();
-    const paragraph = paragraphArea.value;
+        if (searchText === "") {
+            alert("Please enter a word to search!");
+            return;
+        }
 
-    if (searchTerm === '') {
-        alert('Please enter a word to search.');
-        return;
-    }
+        // Remove previous highlights before adding new ones
+        resultDiv.innerHTML = content.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
 
-    const regex = new RegExp(`(${searchTerm})`, 'gi');
-    const highlightedText = paragraph.replace(regex, '<mark>$1</mark>');
+        // Use regex to wrap matching words with a <span> for highlighting
+        let regex = new RegExp(`(${searchText})`, "gi");
+        let highlightedText = resultDiv.innerHTML.replace(regex, `<span class="highlight">$1</span>`);
 
-    paragraphArea.style.display = 'none';
-    const displayDiv = document.createElement('div');
-    displayDiv.innerHTML = highlightedText;
-    displayDiv.id = 'highlightedText';
-    displayDiv.style.padding = '10px';
-    displayDiv.style.border = '1px solid #ccc';
-    displayDiv.style.borderRadius = '15px';
-    displayDiv.style.backgroundColor = 'white';
-    displayDiv.style.marginTop = '10px';
-    document.querySelector('.passcontainer').appendChild(displayDiv);
-}
+        // Update the div with highlighted text
+        resultDiv.innerHTML = highlightedText;
+    });
 
-// Function to clear highlights
-function clearHighlights() {
-    const highlightedDiv = document.getElementById('highlightedText');
-    if (highlightedDiv) {
-        highlightedDiv.remove();
-    }
-    paragraphArea.style.display = 'block';
-    searchInput.value = '';
-}
-
-// Event Listeners
-searchButton.addEventListener('click', highlightText);
-clearButton.addEventListener('click', clearHighlights);
+    clearButton.addEventListener("click", function () {
+        searchInput.value = "";
+        resultDiv.innerHTML = ""; // Clear content
+    });
+});

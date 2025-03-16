@@ -1,0 +1,118 @@
+/* Reset & Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8ef; /* Light, slightly greenish background */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #2f3e46; /* Dark navy/gray from the screenshot style */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  nav .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #d0d0d0;
+  }
+  
+  /* Header Section */
+  header {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Main Section */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+  
+  /* Text-to-Speech Container */
+  .tts-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .tts-container textarea {
+    width: 100%;
+    resize: none;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  /* Speak Button */
+  .tts-container button {
+    background-color: #2f3e46;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tts-container button:hover {
+    background-color: #3f545a;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #2f3e46;
+    color: #fff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
