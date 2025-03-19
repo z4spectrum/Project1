@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Z4 Spectrum</title>
+  <!-- Optional: Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="contact.css" />
+  
+  <!-- EmailJS SDK (Updated URL) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      // Initialize EmailJS with your public user ID (replace YOUR_USER_ID with your actual ID)
+      emailjs.init("MGXn9_PnTlrC2_LjM");
+    })();
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">Z4 Spectrum</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Please fill out the form below and send us your feedback.</p>
+    
+    <form id="contactForm">
+      <div class="form-group">
+         <label for="customerName">Name:</label>
+         <input type="text" id="customerName" name="customerName" required placeholder="Your Name">
+      </div>
+      <div class="form-group">
+         <label for="customerEmail">Email:</label>
+         <input type="email" id="customerEmail" name="customerEmail" required placeholder="Your Email">
+      </div>
+      <div class="form-group">
+         <label for="customerFeedback">Feedback:</label>
+         <textarea id="customerFeedback" name="customerFeedback" rows="5" required placeholder="Your feedback"></textarea>
+      </div>
+      <button type="submit" id="sendMessageBtn">Send Message</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Z4 Spectrum. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="contact.js"></script>
+</body>
+</html>

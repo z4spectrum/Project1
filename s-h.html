@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Highlighter</title>
-    <link rel="stylesheet" href="s-h.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search &amp; Highlight - Custom Paragraph</title>
+  <!-- Optional: Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="s-h.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">Z4 Spectrum</div>
-        <nav>
-            <a href="Z4.html">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">Z4 Spectrum</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <h1>Text Highlighter</h1>
-        <p>Enter text and search for words to highlight.</p>
+  <!-- Main Content -->
+  <main class="main-container">
+    <h1>Search &amp; Highlight</h1>
+    <p>Enter your own paragraph below, then search for any word or phrase within it.</p>
 
-        <div class="box">
-            <textarea id="userInput" placeholder="Enter your text here..."></textarea>
-            <div class="search-container">
-                <input type="text" id="searchBox" placeholder="Search term...">
-                <button id="clearButton">Clear</button>
-                <button id="highlightButton">Highlight</button>
-            </div>
-            <div id="highlightedText" class="highlighted-text"></div>
-        </div>
-    </main>
+    <!-- Text Area + Update Button -->
+    <div class="input-paragraph">
+      <textarea id="userParagraph" rows="5" placeholder="Type or paste your paragraph here..."></textarea>
+      <button id="updateBtn">Update Paragraph</button>
+    </div>
 
-    <footer>
-        © 2025 Z4 Spectrum. All rights reserved.
-    </footer>
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Enter text to highlight..." />
+      <button id="searchBtn">Search</button>
+      <button id="clearBtn">Clear Highlights</button>
+    </div>
 
-    <script src="s-h.js"></script>
+    <!-- Container to Display User's Paragraph -->
+    <div id="textContainer" class="text-container">
+      <!-- User text will appear here after clicking 'Update Paragraph' -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Z4 Spectrum. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="s-h.js"></script>
 </body>
 </html>

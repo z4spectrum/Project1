@@ -1,254 +1,227 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e9e8c9; /* Light beige background */
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-/* Header */
-header {
-    background-color: #2c3e50; /* Dark blue-gray */
-    color: beige;
+    box-sizing: border-box;
+  }
+  
+  /* Body Style */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #2f3e46; /* Dark background */
+    color: #f0f0f0;           /* Light text */
+    min-height: 100vh;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    flex-wrap: wrap; /* Ensures elements wrap properly on smaller screens */
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-nav {
+    background-color: #354f52;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .nav-links {
+    list-style: none;
     display: flex;
-    gap: 15px;
-}
-
-nav a {
-    color: beige;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
     text-decoration: none;
-    font-size: 16px;
-    white-space: nowrap; /* Prevents breaking */
-}
-
-nav a:hover {
+    color: #f0f0f0;
+    font-weight: 500;
+  }
+  
+  .nav-links li a:hover {
     text-decoration: underline;
-}
-
-/* Main Content */
-main {
-    padding: 50px 20px;
-}
-
-h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-}
-
-p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Box for Input & Output */
-.box {
-    background: white;
-    padding: 20px;
+  }
+  
+  /* Main Container */
+  .main-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #d9d9d9; /* Light container background */
+    color: #333;              /* Dark text inside container */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-}
-
-/* Textarea */
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
-    resize: none;
-}
-
-/* Search Bar & Buttons */
-.search-container {
+    padding-bottom: 80px; /* Extra bottom space for fixed footer */
+  }
+  
+  /* Text Area and Update Button */
+  .input-paragraph {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.search-container input {
-    flex-grow: 1;
-    min-width: 200px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #userParagraph {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #2f3e46;
     border-radius: 4px;
-    font-size: 14px;
-    max-width: 300px; /* Ensures input doesn’t expand too much */
-}
-
-.search-container button {
-    padding: 10px 20px;
+    resize: vertical;
+  }
+  
+  #updateBtn {
+    align-self: flex-start;
+    background-color: #2f3e46;
+    color: #f0f0f0;
     border: none;
-    border-radius: 4px;
-    background-color: #2c3e50; /* Dark buttons */
-    color: beige;
-    font-size: 14px;
+    padding: 0.6rem 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.search-container button:hover {
-    background-color: #1a252f;
-}
-
-/* Highlighted Text Output */
-.highlighted-text {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
-    min-height: 150px;
-    box-sizing: border-box;
-    margin-top: 10px;
-}
-
-/* Highlight Effect */
-.highlight {
-    background-color: yellow;
-}
-
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: beige;
+    font-weight: 600;
+  }
+  
+  #updateBtn:hover {
+    background-color: #354f52;
+  }
+  
+  /* Search Box */
+  .search-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-box input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid #2f3e46;
+    border-radius: 4px;
+  }
+  
+  .search-box button {
+    background-color: #2f3e46;
+    color: #f0f0f0;
+    border: none;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .search-box button:hover {
+    background-color: #354f52;
+  }
+  
+  /* Text Container */
+  .text-container {
+    min-height: 100px; /* Reserve space even if empty */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    white-space: pre-wrap; /* Preserve line breaks */
+  }
+  
+  /* Highlighted Text */
+  .highlight {
+    background-color: #ffeb3b; /* Yellow highlight */
+    color: #000;
+    padding: 2px 0;
+  }
+  
+  /* Fixed Footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* ------------------------------ */
-/* Responsive Design - Original Media Queries */
-/* ------------------------------ */
-
-/* Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
+    padding: 1rem;
+    background-color: #354f52;
+    color: #f0f0f0;
+    z-index: 999;
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
     }
-
-    nav {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
+    
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
     }
-
-    nav a {
-        font-size: 14px;
-        margin: 5px;
+    
+    .main-container {
+      margin: 1rem;
+      max-width: 100%;
+      padding: 1rem;
+      padding-bottom: 100px; /* Increase bottom padding for safety */
     }
-
-    .box {
-        width: 95%;
+  }
+  
+  @media (max-width: 480px) {
+    .nav-brand {
+      font-size: 1.2rem;
     }
-
-    .search-container {
-        flex-direction: column;
-        width: 100%;
-        gap: 5px;
+    
+    .nav-links li a {
+      font-size: 0.9rem;
     }
-
-    .search-container input {
-        width: 90%;
-        max-width: 100%;
+    
+    #updateBtn,
+    .search-box button {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.9rem;
     }
-
-    .search-container button {
-        width: 90%;
+    
+    .search-box input,
+    #userParagraph {
+      font-size: 0.9rem;
     }
-}
-
-/* Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-        flex-direction: column;
-        text-align: center;
+  }
+  
+  /* Additional adjustments for screens below 400px */
+  @media (max-width: 400px) {
+    .navbar {
+      padding: 0.5rem 1rem;
+      flex-direction: column;
+      align-items: center;
     }
-
-    .logo {
-        font-size: 18px;
+    
+    .nav-links {
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
     }
-
-    nav {
-        flex-direction: column;
-        gap: 5px;
+    
+    .main-container {
+      margin: 0.5rem;
+      padding: 0.8rem;
+      padding-bottom: 100px;
     }
-
-    nav a {
-        font-size: 14px;
-        margin: 3px 0;
+    
+    .input-paragraph,
+    .search-box {
+      flex-direction: column;
+      gap: 0.5rem;
     }
-
-    main {
-        padding: 30px 10px;
+    
+    #updateBtn,
+    .search-box button {
+      width: 100%;
     }
-
-    h1 {
-        font-size: 24px;
+    
+    .search-box input,
+    #userParagraph {
+      width: 100%;
     }
-
-    .box {
-        width: 100%;
-        padding: 15px;
-        margin: 0 auto; /* Center the box */
-    }
-
-    textarea {
-        height: 120px;
-    }
-
-    .search-container {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .search-container input,
-    .search-container button {
-        width: 90%; /* Reduced width for search elements */
-        margin: 0 auto; /* Center the search elements */
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-
-/* --------------------------------------------- */
-/* OVERRIDE: Make the Header/Nav Fill Full Width */
-/* --------------------------------------------- */
-header, nav {
-    width: 100% !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-}
-}
+  }
+  
