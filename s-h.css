@@ -166,6 +166,42 @@
   }
   
   @media (max-width: 480px) {
+    
+    .navbar {
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .nav-links {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+      
+      .main-container {
+        margin: 0.5rem;
+        padding: 0.8rem;
+        padding-bottom: 100px;
+      }
+      
+      .input-paragraph,
+      .search-box {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      #updateBtn,
+      .search-box button {
+        width: 100%;
+      }
+      
+      .search-box input,
+      #userParagraph {
+        width: 100%;
+      }
     .nav-brand {
       font-size: 1.2rem;
     }
