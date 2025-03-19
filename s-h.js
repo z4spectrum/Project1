@@ -23,25 +23,33 @@ function removeHighlights() {
   });
 }
 
-// Function to highlight text
+// Helper function to escape regex special characters
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Function to highlight text (updated to highlight all matches)
 function highlightText(searchTerm) {
   if (!searchTerm) return;
+  const regex = new RegExp(`(${escapeRegExp(searchTerm)})`, 'gi');
   const walker = document.createTreeWalker(textContainer, NodeFilter.SHOW_TEXT, null);
   let node;
   while ((node = walker.nextNode())) {
-    const nodeText = node.nodeValue;
-    const searchIndex = nodeText.toLowerCase().indexOf(searchTerm.toLowerCase());
-    if (searchIndex !== -1) {
-      const matchText = nodeText.substring(searchIndex, searchIndex + searchTerm.length);
-      const beforeText = document.createTextNode(nodeText.substring(0, searchIndex));
-      const afterText = document.createTextNode(nodeText.substring(searchIndex + searchTerm.length));
-      const highlightSpan = document.createElement('span');
-      highlightSpan.classList.add('highlight');
-      highlightSpan.textContent = matchText;
-      const parent = node.parentNode;
-      parent.replaceChild(afterText, node);
-      parent.insertBefore(highlightSpan, afterText);
-      parent.insertBefore(beforeText, highlightSpan);
+    // Use split to get all parts, including matches
+    const parts = node.nodeValue.split(regex);
+    if (parts.length > 1) {
+      const fragment = document.createDocumentFragment();
+      parts.forEach((part) => {
+        if (part.toLowerCase() === searchTerm.toLowerCase()) {
+          const highlightSpan = document.createElement('span');
+          highlightSpan.classList.add('highlight');
+          highlightSpan.textContent = part;
+          fragment.appendChild(highlightSpan);
+        } else {
+          fragment.appendChild(document.createTextNode(part));
+        }
+      });
+      node.parentNode.replaceChild(fragment, node);
     }
   }
 }
